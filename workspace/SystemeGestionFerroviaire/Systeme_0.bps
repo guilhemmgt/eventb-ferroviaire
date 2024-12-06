@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="inv4/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/act1/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/act2/FIS" org.eventb.core.confidence="-99" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/act3/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Avancer/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Avancer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/act2/FIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/act4/FIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Avancer/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Avancer/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Avancer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerDestination/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerDestination/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverDestination/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverDestination/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
