@@ -15,7 +15,7 @@
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="train"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="troncon"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="troncon ∈ TRONCONS"/>
-        <org.eventb.core.guard name="," org.eventb.core.comment=" Le train est sur un tronçon qui précède le &quot;tronçon destination&quot;" org.eventb.core.label="grd3" org.eventb.core.predicate="Reseau(Position(train)) = troncon"/>
+        <org.eventb.core.guard name="," org.eventb.core.comment=" Le train est sur un tronçon qui précède le &quot;tronçon destination&quot;" org.eventb.core.label="grd3" org.eventb.core.predicate="Position(train) ∈ dom(Reseau) ∧ (Reseau(Position(train)) = troncon)"/>
         <org.eventb.core.guard name="-" org.eventb.core.comment=" Le train doit avoir une destination" org.eventb.core.label="grd4" org.eventb.core.predicate="Destination(train) ∉ ∅"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AttribuerDestination">

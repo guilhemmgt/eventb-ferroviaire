@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/act2/FIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/act4/FIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Avancer/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Avancer/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Avancer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AttribuerDestination/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AttribuerDestination/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverDestination/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverDestination/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/act2/FIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/act4/FIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Avancer/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Avancer/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Avancer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="57" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerDestination/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerDestination/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverDestination/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverDestination/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
