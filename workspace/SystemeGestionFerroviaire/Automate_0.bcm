@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
-    <org.eventb.core.scEvent name="'" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/SystemeGestionFerroviaire/Automate_0.bum|org.eventb.core.machineFile#Automate_0|org.eventb.core.event#'"/>
-    <org.eventb.core.scEvent name="(" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Prendre" org.eventb.core.source="/SystemeGestionFerroviaire/Automate_0.bum|org.eventb.core.machineFile#Automate_0|org.eventb.core.event#."/>
-    <org.eventb.core.scEvent name=")" org.eventb.core.accurate="false" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="Poser" org.eventb.core.source="/SystemeGestionFerroviaire/Automate_0.bum|org.eventb.core.machineFile#Automate_0|org.eventb.core.event#\/"/>
-</org.eventb.core.scMachineFile>
