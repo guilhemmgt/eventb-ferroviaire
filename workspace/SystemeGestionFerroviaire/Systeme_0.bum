@@ -32,4 +32,5 @@
         <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="Destination(train) = Position(train)"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="Destination ≔ {train} ⩤ Destination" org.eventb.core.comment="On enlève la destination pour pouvoir la réattribuer dans le futur" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
+    <org.eventb.core.invariant name="4" org.eventb.core.label="inv5" org.eventb.core.predicate="dom(Position) = TRAINS"/>
 </org.eventb.core.machineFile>
