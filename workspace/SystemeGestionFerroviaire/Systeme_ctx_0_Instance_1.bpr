@@ -153,4 +153,110 @@
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(TRAINS)"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm6/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="TRAINS,TRONCONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(TRONCONS,{t1},{t2},{t3},{t4},{t5},{t6}))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Arrets,{t4}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(TRAINS,{TRAINS1}))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23"/>
+                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
+                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
+                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p26">
+                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Reseau={t1 ↦ t2,t2 ↦ t3,t2 ↦ t1,t3 ↦ t4,t5 ↦ t6}" org.eventb.core.prHyps="p3">
+                                                    <org.eventb.core.prAnte name="'">
+                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Arrets={t4}" org.eventb.core.prHyps="p21">
+                                                            <org.eventb.core.prAnte name="'">
+                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="p1">
+                                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
+                                                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="">
+                                                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28">
+                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps=""/>
+                                                                            </org.eventb.core.prAnte>
+                                                                        </org.eventb.core.prRule>
+                                                                    </org.eventb.core.prAnte>
+                                                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+                                                                    <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+                                                                </org.eventb.core.prRule>
+                                                            </org.eventb.core.prAnte>
+                                                        </org.eventb.core.prRule>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p29">
+                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="p1"/>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Arrets" org.eventb.core.type="ℙ(TRONCONS)"/>
+        <org.eventb.core.prIdent name="Position_initiale" org.eventb.core.type="ℙ(TRAINS×TRONCONS)"/>
+        <org.eventb.core.prIdent name="Reseau" org.eventb.core.type="ℙ(TRONCONS×TRONCONS)"/>
+        <org.eventb.core.prIdent name="TRAINS1" org.eventb.core.type="TRAINS"/>
+        <org.eventb.core.prIdent name="t1" org.eventb.core.type="TRONCONS"/>
+        <org.eventb.core.prIdent name="t2" org.eventb.core.type="TRONCONS"/>
+        <org.eventb.core.prIdent name="t3" org.eventb.core.type="TRONCONS"/>
+        <org.eventb.core.prIdent name="t4" org.eventb.core.type="TRONCONS"/>
+        <org.eventb.core.prIdent name="t5" org.eventb.core.type="TRONCONS"/>
+        <org.eventb.core.prIdent name="t6" org.eventb.core.type="TRONCONS"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="TRAINS1∈dom(Position_initiale)"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="partition(TRAINS,{TRAINS1})"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬t1=t5"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Position_initiale∈TRAINS ↣ TRONCONS"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="Arrets⊆TRONCONS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Reseau={t1 ↦ t2,t2 ↦ t3,t2 ↦ t1,t3 ↦ t4,t5 ↦ t6}"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬t2=t5"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬t3=t5"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬t4=t5"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬t1=t6"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(Arrets,{t4})"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(TRONCONS,{t1},{t2},{t3},{t4},{t5},{t6})"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬t5=t6"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬t2=t6"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬t3=t6"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬t4=t6"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TRAINS1∈dom(Position_initiale)∧Position_initiale∈TRAINS ⇸ TRONCONS"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="TRAINS={TRAINS1}"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="TRAINS1∈TRAINS"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬t1=t3"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬t1=t2"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬t2=t3"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="Reseau∈TRONCONS ↔ TRONCONS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRONCONS={t1,t2,t3,t4,t5,t6}"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬t1=t4"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="Arrets={t4}"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬t2=t4"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬t3=t4"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Position_initiale∈TRAINS ⇸ TRONCONS"/>
+        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="TRAINS"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+    </org.eventb.core.prProof>
 </org.eventb.core.prFile>
