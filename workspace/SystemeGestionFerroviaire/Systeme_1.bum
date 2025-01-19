@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="Systeme_0"/>
+    <org.eventb.core.seesContext name="*" org.eventb.core.target="Systeme_ctx_1"/>
+    <org.eventb.core.variable name="/" org.eventb.core.identifier="Position_wagon"/>
+    <org.eventb.core.variable name="5" org.eventb.core.identifier="Destination"/>
+    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="(" org.eventb.core.assignment="Position_wagon ≔ Position_initiale ∘ (wagon_de_t∼)" org.eventb.core.comment="&#9;Un train a une position initiale, sur 1 unique tronçon" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="Destination ≔ ∅" org.eventb.core.comment="Un train n'a pas de destination initiale" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Avancer_tete">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Avancer_tete"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Avancer_queue">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Avancer_queue"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Avancer_Wagon">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="wagon"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="wagon ∈ WAGONS"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="train"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="train ∈ TRAINS"/>
+        <org.eventb.core.guard name="+" org.eventb.core.comment="Le wagon a un prédecesseur (donc c'est pas la tête)&#10;Et il ne peut aller que là où est son prédecesseur&#10;Compile grâce à l'évaluation paresseuse" org.eventb.core.label="grd3" org.eventb.core.predicate="wagon ∈ dom(predecesseur_de_w) ∧ Position_wagon(predecesseur_de_w(wagon)) = troncon"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="troncon ∈ TRONCONS"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.identifier="troncon"/>
+        <org.eventb.core.guard name="." org.eventb.core.comment="Le train doit avoir une destination" org.eventb.core.label="grd5" org.eventb.core.predicate="train ∈ dom(Destination)"/>
+        <org.eventb.core.guard name="/" org.eventb.core.comment="On ne peut avancer le wagon que si le wagon d'avant a avancé" org.eventb.core.label="grd6" org.eventb.core.predicate="(Position_wagon(wagon) ↦ Position_wagon(predecesseur_de_w(wagon))) ∈ Reseau"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="(Position_wagon(wagon) ↦ troncon) ∈ Reseau"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="Position_wagon(wagon) ≔ troncon" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AttribuerDestination">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AttribuerDestination"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name=":" org.eventb.core.comment="Le train arrive à destination" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ArriverDestination">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ArriverDestination"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="=" org.eventb.core.label="inv1" org.eventb.core.predicate="Position_wagon ∈ WAGONS ↣ TRONCONS "/>
+</org.eventb.core.machineFile>

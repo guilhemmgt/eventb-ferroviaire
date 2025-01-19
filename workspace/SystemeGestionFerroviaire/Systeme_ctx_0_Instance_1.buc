@@ -11,7 +11,9 @@
     <org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(TRAINS)"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="t5"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="t6"/>
-    <org.eventb.core.axiom name="2" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(TRAINS, {TRAINS1})"/>
+    <org.eventb.core.axiom name="2" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(TRAINS, {TRAINS1},  {TRAINS2})"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="3" org.eventb.core.identifier="TRAINS1"/>
     <org.eventb.core.axiom name="4" org.eventb.core.label="axm6" org.eventb.core.predicate="Position_initiale(TRAINS1) = t1"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="5" org.eventb.core.identifier="TRAINS2"/>
+    <org.eventb.core.axiom name="6" org.eventb.core.label="axm7" org.eventb.core.predicate="Position_initiale(TRAINS2) = t2"/>
 </org.eventb.core.contextFile>
