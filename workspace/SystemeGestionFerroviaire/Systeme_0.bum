@@ -14,7 +14,7 @@
     <org.eventb.core.invariant name=":" org.eventb.core.label="inv4" org.eventb.core.predicate="dom(Position_queue) = TRAINS"/>
     <org.eventb.core.invariant name="inv1" org.eventb.core.comment="La tête est soit à la&#13;&#10;position de la queue,&#13;&#10;soit devant elle" org.eventb.core.label="inv5" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ ( Position_tete(t) = Position_queue(t) ∨ (Position_queue(t) ↦ Position_tete(t)) ∈ Reseau )"/>
     <org.eventb.core.invariant name="0" org.eventb.core.comment="Un train a 0 ou 1 destination (=arrêt)" org.eventb.core.label="inv6" org.eventb.core.predicate="Destination ∈ TRAINS ⇸ Arrets "/>
-    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Avancer_tete">
+    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AvancerTete">
         <org.eventb.core.action name="'" org.eventb.core.assignment="Position_tete(train) ≔ troncon" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="train"/>
@@ -26,7 +26,7 @@
         <org.eventb.core.guard name="/" org.eventb.core.comment="Le tronçon est libre" org.eventb.core.label="grd6" org.eventb.core.predicate="troncon ∉ (ran(Position_tete) ∪ ran(Position_queue))"/>
         <org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="(Position_queue(train) ↦ troncon) ∈ Reseau"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Avancer_queue">
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AvancerQueue">
         <org.eventb.core.action name="'" org.eventb.core.assignment="Position_queue(train) ≔ troncon" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="train"/>
