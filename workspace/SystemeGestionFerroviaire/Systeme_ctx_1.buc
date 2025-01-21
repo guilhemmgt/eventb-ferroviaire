@@ -7,7 +7,8 @@
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="Element"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="Tete"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="." org.eventb.core.identifier="Queue"/>
-    <org.eventb.core.axiom name="/" org.eventb.core.label="axm2" org.eventb.core.predicate="Tete ∈ Element → TRONCONS"/>
-    <org.eventb.core.axiom name="0" org.eventb.core.label="axm3" org.eventb.core.predicate="Queue ∈ Element → ROUTES"/>
-    <org.eventb.core.axiom name="1" org.eventb.core.label="axm4" org.eventb.core.predicate="∀ e · (e ∈ Element ∧ Queue(e) ∈ dom(Tete)) ⇒ (Tete(e) ↦ Tete(Queue(e))) ∈ Reseau"/>
+    <org.eventb.core.axiom name="2" org.eventb.core.comment="Il existe un unique élément nul" org.eventb.core.label="axm2" org.eventb.core.predicate="card(Vide) = 1"/>
+    <org.eventb.core.axiom name="/" org.eventb.core.label="axm3" org.eventb.core.predicate="Tete ∈ Element → TRONCONS"/>
+    <org.eventb.core.axiom name="0" org.eventb.core.label="axm4" org.eventb.core.predicate="Queue ∈ Element → ROUTES"/>
+    <org.eventb.core.axiom name="1" org.eventb.core.label="axm5" org.eventb.core.predicate="∀ e · (e ∈ Element ∧ Queue(e) ∉ Vide) ⇒ (Tete(e) ↦ Tete(Queue(e))) ∈ Reseau"/>
 </org.eventb.core.contextFile>
