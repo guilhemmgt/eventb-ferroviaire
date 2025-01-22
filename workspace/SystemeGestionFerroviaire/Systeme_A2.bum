@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="Systeme_A1"/>
+    <org.eventb.core.seesContext name="*" org.eventb.core.target="Systeme_ctx_A2"/>
+    <org.eventb.core.variable name="+" org.eventb.core.identifier="Position_tete"/>
+    <org.eventb.core.variable name="/" org.eventb.core.identifier="Position_queue"/>
+    <org.eventb.core.variable name="5" org.eventb.core.identifier="Destination"/>
+    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="Route :∈ TRAINS → Vide" org.eventb.core.comment="Un train n'a pas de route initiale (= a une route vide)" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AvancerTete">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AvancerTete"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="Le train a une route non vide" org.eventb.core.label="grd8" org.eventb.core.predicate="train ∈ dom(Route) ∧ Route(train) ∉ Vide"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="Route(train) ≔ Queue(Route(train))" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="*" org.eventb.core.comment="Le tronçon est le premier de la route" org.eventb.core.label="grd9" org.eventb.core.predicate="troncon = Tete(Route(train)) "/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AvancerQueue">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AvancerQueue"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AttribuerDestination">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AttribuerDestination"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name=":" org.eventb.core.comment="Le train arrive à destination" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ArriverDestination">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ArriverDestination"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AttribuerRoute">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="train"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="route"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="route ∈ ROUTES"/>
+        <org.eventb.core.guard name="+" org.eventb.core.comment="Le train doit avoir une destination pour avoir une route" org.eventb.core.label="grd3" org.eventb.core.predicate="train ∈ dom(Destination)"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="Route(train) ≔ route" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="=" org.eventb.core.identifier="Route"/>
+    <org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv1" org.eventb.core.predicate="Route ∈ TRAINS → ROUTES"/>
+</org.eventb.core.machineFile>
