@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
     <org.eventb.core.extendsContext name="'" org.eventb.core.target="Systeme_ctx_0"/>
-    <org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TRONCONS, {t1}, {t2}, {t3}, {t4}, {t5}, {t6})"/>
+    <org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TRONCONS, {t1}, {t2}, {t3}, {t4}, {t5}, {t6}, {t7})"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.identifier="t1"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="t2"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.identifier="t3"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="t4"/>
-    <org.eventb.core.axiom name="-" org.eventb.core.label="axm2" org.eventb.core.predicate="Reseau = {t1 ↦ t2, t2 ↦ t3, t2 ↦ t1, t3 ↦ t4, t5 ↦ t6}"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.label="axm2" org.eventb.core.predicate="Reseau = {t1 ↦ t2, t2 ↦ t3, t2 ↦ t1, t3 ↦ t4, t4 ↦ t3, t4 ↦ t7}"/>
     <org.eventb.core.axiom name="." org.eventb.core.label="axm3" org.eventb.core.predicate="partition(Arrets, {t4})"/>
     <org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(TRAINS)"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="t5"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="t6"/>
     <org.eventb.core.axiom name="2" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(TRAINS, {TRAINS1},  {TRAINS2})"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="7" org.eventb.core.identifier="t7"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="3" org.eventb.core.identifier="TRAINS1"/>
     <org.eventb.core.axiom name="4" org.eventb.core.label="axm6" org.eventb.core.predicate="Position_initiale(TRAINS1) = t1"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="5" org.eventb.core.identifier="TRAINS2"/>
