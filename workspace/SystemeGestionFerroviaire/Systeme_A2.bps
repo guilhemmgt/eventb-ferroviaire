@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="116" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AttribuerRoute/grd12/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="116" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AttribuerRoute/grd13/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="120" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AttribuerRoute/grd14/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="121" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AttribuerRoute/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="121" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/troncon/WFIS" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="166" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/grd4/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/grd6/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/grd7/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerTete/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="166" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="166" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="166" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

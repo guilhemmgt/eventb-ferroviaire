@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
     <org.eventb.core.refinesMachine name="'" org.eventb.core.target="Systeme_A0"/>
-    <org.eventb.core.seesContext name="*" org.eventb.core.target="Systeme_ctx_A0_Instance_1"/>
+    <org.eventb.core.seesContext name="*" org.eventb.core.target="Systeme_ctx_A0"/>
     <org.eventb.core.variable name="+" org.eventb.core.identifier="Position_tete"/>
     <org.eventb.core.variable name="/" org.eventb.core.identifier="Position_queue"/>
     <org.eventb.core.variable name="5" org.eventb.core.identifier="Destination"/>
@@ -13,20 +13,24 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AvancerTete">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AvancerTete"/>
-        <org.eventb.core.action name="'" org.eventb.core.assignment="Position_tete(train) ≔ troncon" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="Position_tete ≔ ({train} ⩤ Position_tete)&#13;&#10;&#9;&#9;&#9;&#9;∪ {_train  ↦ _troncon ∣ _train = train ∧ _train ↦ (0 ↦ _troncon) ∈ Route}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="act1" org.eventb.core.assignment="Route ≔ ({train}⩤Route)&#13;&#10;&#9;&#9;∪ {_train↦(i−1↦t) ∣ _train=train ∧ i≠0 ∧ i↦t∈(Route[{train}]) }" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="internal1" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="train"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="troncon"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="troncon ∈ TRONCONS"/>
         <org.eventb.core.guard name="." org.eventb.core.comment="On ne peut avancer la tête que si on a déjà avancé la queue" org.eventb.core.label="grd3" org.eventb.core.predicate="Position_tete(train) = Position_queue(train)"/>
-        <org.eventb.core.guard name="," org.eventb.core.comment="Le train est sur un tronçon qui précède le &quot;tronçon destination&quot;" org.eventb.core.label="grd4" org.eventb.core.predicate="Position_tete(train) ∈ dom(Reseau) ∧ (Position_tete(train) ↦ troncon) ∈ Reseau"/>
         <org.eventb.core.guard name="-" org.eventb.core.comment=" Le train doit avoir une destination" org.eventb.core.label="grd5" org.eventb.core.predicate="train ∈ dom(Destination)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.comment="Le tronçon est libre" org.eventb.core.label="grd6" org.eventb.core.predicate="troncon ∉ (ran(Position_tete) ∪ ran(Position_queue))"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="(Position_queue(train) ↦ troncon) ∈ Reseau"/>
         <org.eventb.core.guard name="(" org.eventb.core.comment="Le train a une route non vide" org.eventb.core.label="grd8" org.eventb.core.predicate="{x ∣ train ↦ x ∈ Route} ≠ ∅"/>
+        <org.eventb.core.witness name="internal2" org.eventb.core.label="troncon" org.eventb.core.predicate="train ↦ (0↦troncon) ∈ Route"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AvancerQueue">
+    <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AvancerQueue">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AvancerQueue"/>
+        <org.eventb.core.action name="internal1" org.eventb.core.assignment="Position_queue(train) ≔ Position_tete(train)" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="train"/>
+        <org.eventb.core.guard name="internal4" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
+        <org.eventb.core.guard name="internal5" org.eventb.core.label="grd2" org.eventb.core.predicate="Position_tete(train) ≠ Position_queue(train)"/>
+        <org.eventb.core.guard name="internal6" org.eventb.core.label="grd3" org.eventb.core.predicate="(Position_queue(train) ↦ Position_tete(train)) ∈ Reseau"/>
+        <org.eventb.core.guard name="internal8" org.eventb.core.label="grd4" org.eventb.core.predicate="train ∈ dom(Destination)"/>
+        <org.eventb.core.guard name="internal9" org.eventb.core.label="grd5" org.eventb.core.predicate="Position_tete(train) ∉ ran(Position_queue)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AttribuerDestination">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AttribuerDestination"/>
@@ -38,13 +42,14 @@
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="train"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="route"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="route ∈ ℙ(ℕ × TRONCONS)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="route ∈ ℙ(ℕ × TRONCONS)"/>
         <org.eventb.core.guard name="+" org.eventb.core.comment="    Le train doit avoir une destination" org.eventb.core.label="grd3" org.eventb.core.predicate="train ∈ dom(Destination)"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="Route ≔ (Route ∖ {t↦x ∣ t↦x∈Route ∧ t=train}) ∪ {t↦x ∣ x∈route ∧ t=train}" org.eventb.core.comment="   Remplace la route actuelle du train par sa nouvelle route" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="grd7" org.eventb.core.comment="    Deux tronçons ne peuvent pas avoir le même indice" org.eventb.core.label="grd12" org.eventb.core.predicate="∀ i · i∈dom(route) ⇒ card({tr ∣ tr∈TRONCONS ∧ i↦tr∈route}) ≤ 1"/>
-        <org.eventb.core.guard name="grd8" org.eventb.core.comment="    Les tronçons sont numérotés de 0 à card-1" org.eventb.core.label="grd13" org.eventb.core.predicate="∀ i,tr · i∈dom(route) ∧ tr∈ran(route) ∧ i↦tr∈route ⇒ 0≤i ∧ i≤card(route)−1"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.comment="    Deux tronçons ne peuvent pas avoir le même indice" org.eventb.core.label="grd4" org.eventb.core.predicate="∀ i · i∈dom(route) ⇒ card({tr ∣ tr∈TRONCONS ∧ i↦tr∈route}) ≤ 1"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.comment="    Les tronçons sont numérotés de 0 à card-1" org.eventb.core.label="grd5" org.eventb.core.predicate="∀ i,tr · i∈dom(route) ∧ tr∈ran(route) ∧ i↦tr∈route ⇒ 0≤i ∧ i≤card(route)−1"/>
         <org.eventb.core.guard name="grd1" org.eventb.core.comment="    Deux tronçons d'indices successifs&#13;&#10;     se suivent dans le réseau" org.eventb.core.label="grd6" org.eventb.core.predicate="∀ i,tr1,tr2 · i∈dom(route) ∧ tr1∈ran(route) ∧ tr2∈ran(route)&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;   ∧ i−1↦tr1∈route ∧ i↦tr2∈route ⇒ tr1↦tr2∈Reseau"/>
-        <org.eventb.core.guard name="grd9" org.eventb.core.comment="    La route commence devant le train" org.eventb.core.label="grd14" org.eventb.core.predicate="∃ tr · tr∈ran(route) ∧ Position_tete(train)↦tr∈Reseau ∧ 0↦tr∈route"/>
+        <org.eventb.core.guard name="grd9" org.eventb.core.comment="    La route commence devant le train" org.eventb.core.label="grd7" org.eventb.core.predicate="∃ tr · tr∈ran(route) ∧ Position_tete(train)↦tr∈Reseau ∧ 0↦tr∈route"/>
+        <org.eventb.core.guard name="grd:" org.eventb.core.label="grd8" org.eventb.core.predicate="card(route)=4"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="=" org.eventb.core.identifier="Route"/>
     <org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv1" org.eventb.core.predicate="Route ∈ TRAINS ↔ ℕ × TRONCONS"/>
