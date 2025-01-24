@@ -9,4 +9,5 @@
     <org.eventb.core.axiom name="," org.eventb.core.label="axm2" org.eventb.core.predicate="Arrets ⊆ TRONCONS"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="Position_initiale"/>
     <org.eventb.core.axiom name="." org.eventb.core.comment="Chaque train a une position initiale (différente des autres)" org.eventb.core.label="axm3" org.eventb.core.predicate="Position_initiale ∈ TRAINS ↣ TRONCONS"/>
+    <org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="finite(TRONCONS)"/>
 </org.eventb.core.contextFile>

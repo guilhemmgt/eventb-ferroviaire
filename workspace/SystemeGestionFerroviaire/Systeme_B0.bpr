@@ -13545,4 +13545,6 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AvancerTete/grd2/GRD"/>
+    <org.eventb.core.prProof name="AvancerTete/grd5/GRD"/>
 </org.eventb.core.prFile>
