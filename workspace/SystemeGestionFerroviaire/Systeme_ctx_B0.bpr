@@ -13,4 +13,44 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm4/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="t" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="TRAINS,WAGONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees t)" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                                <org.eventb.core.prIdent name="t" org.eventb.core.type="TRAINS"/>
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with predecesseur_de_w=successeur_de_w∼" org.eventb.core.prHyps="p1">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="predecesseur_de_w" org.eventb.core.type="ℙ(WAGONS×WAGONS)"/>
+        <org.eventb.core.prIdent name="successeur_de_w" org.eventb.core.type="ℙ(WAGONS×WAGONS)"/>
+        <org.eventb.core.prIdent name="train_de_w" org.eventb.core.type="ℙ(WAGONS×TRAINS)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(train_de_w∼[{t}])">
+            <org.eventb.core.prIdent name="t" org.eventb.core.type="TRAINS"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Arrets⊆TRONCONS">
+            <org.eventb.core.prIdent name="Arrets" org.eventb.core.type="ℙ(TRONCONS)"/>
+            <org.eventb.core.prIdent name="TRONCONS" org.eventb.core.type="ℙ(TRONCONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀t⦂TRAINS·finite(train_de_w∼[{t}])"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="predecesseur_de_w=successeur_de_w∼"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒finite(train_de_w∼[{t}])"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀t⦂TRAINS·⊤⇒finite(train_de_w∼[{t}])"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+    </org.eventb.core.prProof>
 </org.eventb.core.prFile>

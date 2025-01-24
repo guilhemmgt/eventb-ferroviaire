@@ -75,5 +75,8 @@
         <org.eventb.core.guard name="grd8" org.eventb.core.comment="    Les tronçons sont numérotés de 0 à card-1" org.eventb.core.label="grd6" org.eventb.core.predicate="∀ i,tr · i∈dom(route) ∧ tr∈ran(route) ∧ i↦tr∈route ⇒ 0≤i ∧ i≤card(route)−1"/>
         <org.eventb.core.guard name="grd1" org.eventb.core.comment="    Deux tronçons d'indices successifs&#13;&#10;     se suivent dans le réseau" org.eventb.core.label="grd7" org.eventb.core.predicate="∀ i,tr1,tr2 · i∈dom(route) ∧ tr1∈ran(route) ∧ tr2∈ran(route)&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;   ∧ i−1↦tr1∈route ∧ i↦tr2∈route ⇒ tr1↦tr2∈Reseau"/>
         <org.eventb.core.guard name="grd9" org.eventb.core.comment="    La route commence devant le train" org.eventb.core.label="grd8" org.eventb.core.predicate="∃ tr · tr∈ran(route) ∧ (∀ w · w ∈ WAGONS ∧ train_de_w(w) = train ∧ w ∉ dom(predecesseur_de_w) ⇒ Position_wagon(w)↦tr∈Reseau ∧ 0↦tr∈route)"/>
+        <org.eventb.core.guard name="grd&gt;" org.eventb.core.label="grd9" org.eventb.core.predicate="card(route) = 4"/>
     </org.eventb.core.event>
+    <org.eventb.core.invariant name="B" org.eventb.core.label="inv2" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ card({w ∣ w ∈ WAGONS ∧ train_de_w(w) = t ∧ w ∉ dom(predecesseur_de_w)}) = 1"/>
+    <org.eventb.core.invariant name="C" org.eventb.core.label="inv3" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ card({w ∣ w ∈ WAGONS ∧ train_de_w(w) = t ∧ w ∉ dom(successeur_de_w)}) = 1"/>
 </org.eventb.core.machineFile>
