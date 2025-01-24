@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="inv2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="inv3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/grd10/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/grd12/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/grd2/GRD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="125" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/grd4/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/grd5/GRD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="125" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerTete/act2/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd8/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerQueue/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerWagon/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerWagon/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerWagon/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerWagon/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerWagon/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AvancerWagon/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverDestination/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverDestination/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="125" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="INITIALISATION/act3/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/act4/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/proof1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/proof2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonTete/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonQueue/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonQueue/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonQueue/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonQueue/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonQueue/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonQueue/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonIntermediaire/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonIntermediaire/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AvancerWagonIntermediaire/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverDestination/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverDestination/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="151" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="152" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AttribuerRoute/grd8/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="152" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
