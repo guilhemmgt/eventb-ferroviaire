@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
         <org.eventb.core.poIdentifier name="TRAINS" org.eventb.core.type="ℙ(TRAINS)"/>
         <org.eventb.core.poIdentifier name="TRONCONS" org.eventb.core.type="ℙ(TRONCONS)"/>
         <org.eventb.core.poIdentifier name="Position_initiale" org.eventb.core.type="ℙ(TRAINS×TRONCONS)"/>
@@ -21,5 +21,5 @@
         <org.eventb.core.poPredicate name="Position_initialq" org.eventb.core.predicate="∀r⦂ℙ(TRONCONS×TRONCONS),s⦂ℙ(TRONCONS×TRONCONS)·r⊆s∧s;r⊆s⇒Fermeture_reseau(r)⊆s" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_A1.buc|org.eventb.core.contextFile#Systeme_ctx_A1|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poPredicate name="Position_initialr" org.eventb.core.predicate="∀t1⦂TRONCONS,t2⦂TRONCONS·t1∈TRONCONS∧t2∈TRONCONS⇒t1=t2∨t1 ↦ t2∈Fermeture_reseau(Reseau)" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_A1.buc|org.eventb.core.contextFile#Systeme_ctx_A1|org.eventb.core.axiom#0"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_A1_Instance_1.bpo|org.eventb.core.poFile#Systeme_ctx_A1_Instance_1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_A1_Instance_1.bpo|org.eventb.core.poFile#Systeme_ctx_A1_Instance_1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7"/>
 </org.eventb.core.poFile>

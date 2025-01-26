@@ -1,2 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.core.prFile version="1"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="axm6/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="tr" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="TRONCONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees tr)" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                                        <org.eventb.core.prIdent name="tr" org.eventb.core.type="TRONCONS"/>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Reseau" org.eventb.core.type="ℙ(TRONCONS×TRONCONS)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∃tr2⦂TRONCONS·tr ↦ tr2∈Reseau">
+            <org.eventb.core.prIdent name="tr" org.eventb.core.type="TRONCONS"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀tr⦂TRONCONS·tr∈TRONCONS⇒(∃tr2⦂TRONCONS·tr2∈TRONCONS⇒tr ↦ tr2∈Reseau)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀tr⦂TRONCONS·tr∈TRONCONS⇒((∀tr2⦂TRONCONS·tr2∈TRONCONS)⇒(∃tr2⦂TRONCONS·tr ↦ tr2∈Reseau))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Arrets⊆TRONCONS">
+            <org.eventb.core.prIdent name="Arrets" org.eventb.core.type="ℙ(TRONCONS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀tr⦂TRONCONS·⊤⇒(⊤⇒(∃tr2⦂TRONCONS·tr ↦ tr2∈Reseau))"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀tr⦂TRONCONS·∃tr2⦂TRONCONS·tr ↦ tr2∈Reseau"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm7/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="TRONCONS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(TRONCONS)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>
