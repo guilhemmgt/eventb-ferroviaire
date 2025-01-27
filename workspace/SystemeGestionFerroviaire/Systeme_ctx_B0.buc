@@ -4,15 +4,18 @@
     <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="WAGONS"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.identifier="train_de_w"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="successeur_de_w"/>
-    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.identifier="predecesseur_de_w"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="+" org.eventb.core.identifier="predecesseur_de_w"/>
     <org.eventb.core.axiom name="," org.eventb.core.comment="Chaque train a des wagons, et tous les wagons sont reliés à un train" org.eventb.core.label="axm1" org.eventb.core.predicate="train_de_w ∈ WAGONS ↠ TRAINS"/>
     <org.eventb.core.axiom name="-" org.eventb.core.comment="Un wagon a 1 successeur ou 0 si c'est la queue" org.eventb.core.label="axm2" org.eventb.core.predicate="successeur_de_w ∈ WAGONS ⤔ WAGONS"/>
     <org.eventb.core.axiom name="." org.eventb.core.comment="Un wagon a 1 predecesseur ou 0 si c'est la tête" org.eventb.core.label="axm3" org.eventb.core.predicate="predecesseur_de_w = successeur_de_w∼"/>
+    <org.eventb.core.axiom name="axm9" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(WAGONS)"/>
     <org.eventb.core.axiom name="0" org.eventb.core.comment=" successeur_de_w n'est pas réflexif" org.eventb.core.label="axm5" org.eventb.core.predicate="∀ w · w ∈ dom(successeur_de_w) ⇒ successeur_de_w(w) ≠ w"/>
     <org.eventb.core.axiom name="axm3" org.eventb.core.comment=" predecesseur_de_w n'est pas réflexif" org.eventb.core.label="axm6" org.eventb.core.predicate="∀ w · w ∈ dom(predecesseur_de_w) ⇒ predecesseur_de_w(w) ≠ w"/>
     <org.eventb.core.axiom name="axm1" org.eventb.core.comment=" Le successeur d'un wagon appartient au même train" org.eventb.core.label="axm7" org.eventb.core.predicate="∀ w · w ∈ dom(successeur_de_w) ⇒ train_de_w(successeur_de_w(w)) = train_de_w(w)"/>
     <org.eventb.core.axiom name="axm4" org.eventb.core.comment=" Le predecesseur d'un wagon appartient au même train" org.eventb.core.label="axm8" org.eventb.core.predicate="∀ w · w ∈ dom(predecesseur_de_w) ⇒ train_de_w(predecesseur_de_w(w)) = train_de_w(w)"/>
-    <org.eventb.core.axiom name="/" org.eventb.core.comment="On interdit les trains d'un seul wagon" org.eventb.core.label="axm9" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ card(train_de_w∼[{t}]) ≥ 2 ∧ finite(train_de_w∼[{t}])"/>
+    <org.eventb.core.axiom name="/" org.eventb.core.comment="On interdit les trains d'un seul wagon" org.eventb.core.label="axm9" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ card(train_de_w∼[{t}]) ≥ 2"/>
+    <org.eventb.core.axiom name="axm:" org.eventb.core.label="axm10" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ card({w · w ∉ dom(predecesseur_de_w) ∣ w}) = 1"/>
+    <org.eventb.core.axiom name="axm10" org.eventb.core.label="axm11" org.eventb.core.predicate="∀ t · t ∈ TRAINS ⇒ card({w · w ∉ dom(successeur_de_w) ∣ w}) = 1"/>
     <org.eventb.core.axiom name="axm5" org.eventb.core.label="thm1" org.eventb.core.predicate="dom(successeur_de_w) = ran(predecesseur_de_w)" org.eventb.core.theorem="true"/>
     <org.eventb.core.axiom name="axm6" org.eventb.core.comment="Chaque wagon a 1 predecesseur direct ou 0" org.eventb.core.label="thm2" org.eventb.core.predicate="∀ w1, w2, w3 · w1 ∈ WAGONS ∧ w2 ∈ WAGONS ∧ w3 ∈ WAGONS &#13;&#10;∧ w1 ↦ w2 ∈ predecesseur_de_w &#13;&#10;∧ w1 ↦ w3 ∈ predecesseur_de_w &#13;&#10;⇒ (w2 = w3)" org.eventb.core.theorem="true"/>
     <org.eventb.core.axiom name="axm7" org.eventb.core.comment="Chaque wagon a 1 successeur direct ou 0" org.eventb.core.label="thm3" org.eventb.core.predicate="∀ w1, w2, w3 · w1 ∈ WAGONS ∧ w2 ∈ WAGONS ∧ w3 ∈ WAGONS &#13;&#10;∧ w1 ↦ w2 ∈ successeur_de_w &#13;&#10;∧ w1 ↦ w3 ∈ successeur_de_w &#13;&#10;⇒ (w2 = w3)" org.eventb.core.theorem="true"/>
