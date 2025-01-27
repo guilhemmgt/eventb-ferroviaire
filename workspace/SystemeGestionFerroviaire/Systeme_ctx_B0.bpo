@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="95">
+<org.eventb.core.poFile org.eventb.core.poStamp="97">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="88">
         <org.eventb.core.poIdentifier name="TRAINS" org.eventb.core.type="ℙ(TRAINS)"/>
         <org.eventb.core.poIdentifier name="TRONCONS" org.eventb.core.type="ℙ(TRONCONS)"/>
@@ -46,37 +46,37 @@
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A:"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="95">
+    <org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="96">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A;"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒finite({w⦂WAGONS·w∉dom(predecesseur_de_w) ∣ w})" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒(∀w⦂WAGONS·w∉dom(predecesseur_de_w)⇒w∈dom(train_de_w)∧train_de_w∈WAGONS ⇸ TRAINS)∧finite({w⦂WAGONS·w∉dom(predecesseur_de_w)∧train_de_w(w)=t ∣ w})" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm:"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A;"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="95">
+    <org.eventb.core.poSequent name="axm11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A="/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒finite({w⦂WAGONS·w∉dom(successeur_de_w) ∣ w})" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒(∀w⦂WAGONS·w∉dom(successeur_de_w)⇒w∈dom(train_de_w)∧train_de_w∈WAGONS ⇸ TRAINS)∧finite({w⦂WAGONS·w∉dom(successeur_de_w)∧train_de_w(w)=t ∣ w})" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm10"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm10"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A="/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="thm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="95">
+    <org.eventb.core.poSequent name="thm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A&gt;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(successeur_de_w)=ran(predecesseur_de_w)" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm5"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm5"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A&gt;"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="thm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="95">
+    <org.eventb.core.poSequent name="thm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A?"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀w1⦂WAGONS,w2⦂WAGONS,w3⦂WAGONS·w1∈WAGONS∧w2∈WAGONS∧w3∈WAGONS∧w1 ↦ w2∈predecesseur_de_w∧w1 ↦ w3∈predecesseur_de_w⇒w2=w3" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm6"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm6"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A?"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="thm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="95">
+    <org.eventb.core.poSequent name="thm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A@"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀w1⦂WAGONS,w2⦂WAGONS,w3⦂WAGONS·w1∈WAGONS∧w2∈WAGONS∧w3∈WAGONS∧w1 ↦ w2∈successeur_de_w∧w1 ↦ w3∈successeur_de_w⇒w2=w3" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm7"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A@"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="thm4/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="95">
+    <org.eventb.core.poSequent name="thm4/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_AA"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="predecesseur_de_w∈WAGONS ⤔ WAGONS" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm8"/>
@@ -103,22 +103,22 @@
     <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A;" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A:" org.eventb.core.poStamp="92">
         <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒card(train_de_w∼[{t}])≥2" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A=" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A;" org.eventb.core.poStamp="93">
-        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒card({w⦂WAGONS·w∉dom(predecesseur_de_w) ∣ w})=1" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm:"/>
+    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A=" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A;" org.eventb.core.poStamp="96">
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒card({w⦂WAGONS·w∉dom(predecesseur_de_w)∧train_de_w(w)=t ∣ w})=1" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm:"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A&gt;" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A=" org.eventb.core.poStamp="95">
-        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒card({w⦂WAGONS·w∉dom(successeur_de_w) ∣ w})=1" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm10"/>
+    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A&gt;" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A=" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀t⦂TRAINS·t∈TRAINS⇒card({w⦂WAGONS·w∉dom(successeur_de_w)∧train_de_w(w)=t ∣ w})=1" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm10"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A?" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A&gt;" org.eventb.core.poStamp="95">
+    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A?" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A&gt;" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="dom(successeur_de_w)=ran(predecesseur_de_w)" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm5"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A@" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A?" org.eventb.core.poStamp="95">
+    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_A@" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A?" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="∀w1⦂WAGONS,w2⦂WAGONS,w3⦂WAGONS·w1∈WAGONS∧w2∈WAGONS∧w3∈WAGONS∧w1 ↦ w2∈predecesseur_de_w∧w1 ↦ w3∈predecesseur_de_w⇒w2=w3" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm6"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_AA" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A@" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="HYPSysteme_ctx_AA" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_A@" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="∀w1⦂WAGONS,w2⦂WAGONS,w3⦂WAGONS·w1∈WAGONS∧w2∈WAGONS∧w3∈WAGONS∧w1 ↦ w2∈successeur_de_w∧w1 ↦ w3∈successeur_de_w⇒w2=w3" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm7"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_AA" org.eventb.core.poStamp="95">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_ctx_B0.bpo|org.eventb.core.poFile#Systeme_ctx_B0|org.eventb.core.poPredicateSet#HYPSysteme_ctx_AA" org.eventb.core.poStamp="97">
         <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="predecesseur_de_w∈WAGONS ⤔ WAGONS" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_ctx_B0.buc|org.eventb.core.contextFile#Systeme_ctx_B0|org.eventb.core.axiom#axm8"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

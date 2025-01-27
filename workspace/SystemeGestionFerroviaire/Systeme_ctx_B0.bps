@@ -5,10 +5,10 @@
     <org.eventb.core.psStatus name="axm7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="axm10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="axm11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="thm1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="thm2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="thm3/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="thm4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="axm10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="axm11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="97" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="thm1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="97" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="thm2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="97" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="thm3/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="97" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="thm4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="97" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
