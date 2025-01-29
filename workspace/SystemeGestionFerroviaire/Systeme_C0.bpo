@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="20">
+<org.eventb.core.poFile org.eventb.core.poStamp="21">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="8">
         <org.eventb.core.poIdentifier name="TRAINS" org.eventb.core.type="ℙ(TRAINS)"/>
         <org.eventb.core.poIdentifier name="TRONCONS" org.eventb.core.type="ℙ(TRONCONS)"/>
@@ -171,29 +171,20 @@
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∃tr⦂TRONCONS·tr∈ran(route)∧(∃w⦂WAGONS·w∈WAGONS∧train_de_w(w)=train∧w∉dom(predecesseur_de_w)∧Position_wagon(w) ↦ tr∈Reseau)∧0 ↦ tr∈route" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_B0.bum|org.eventb.core.machineFile#Systeme_B0|org.eventb.core.event#A|org.eventb.core.guard#grd9"/>
         <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="card(route)=3" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_B0.bum|org.eventb.core.machineFile#Systeme_B0|org.eventb.core.event#A|org.eventb.core.guard#grd&gt;"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RenouvelerAutoriteMouvement/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="20">
+    <org.eventb.core.poSequent name="RenouvelerAutoriteMouvement/grd3/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="21">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTHYPSysteme_ctx_C0_Instance_:("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(Route)∧Route∈TRAINS ⇸ ℤ × TRONCONS" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H|org.eventb.core.guard#,"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTHYPSysteme_ctx_C0_Instance_:("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RenouvelerAutoriteMouvement/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="20">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTALLHYPSysteme_ctx_C0_Instance_:"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(TRONCONS×TRAINS))∈TRONCONS ⇸ TRAINS" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.invariant#J"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.invariant#J"/>
-        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poSequent#RenouvelerAutoriteMouvement\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTSysteme_ctx_C0_Instance_:" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
-        <org.eventb.core.poIdentifier name="Autorite_mouvement'" org.eventb.core.type="ℙ(TRONCONS×TRAINS)"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTSysteme_ctx_C0_Instance_:" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="21">
         <org.eventb.core.poIdentifier name="train" org.eventb.core.type="TRAINS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPSysteme_ctx_C0_Instance_:(" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTIDENTSysteme_ctx_C0_Instance_:" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPSysteme_ctx_C0_Instance_:(" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTIDENTSysteme_ctx_C0_Instance_:" org.eventb.core.poStamp="21">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="train∈TRAINS" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="train∈dom(Destination)" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPSysteme_ctx_C0_Instance_:" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTHYPSysteme_ctx_C0_Instance_:(" org.eventb.core.poStamp="20">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPSysteme_ctx_C0_Instance_:" org.eventb.core.parentSet="/SystemeGestionFerroviaire/Systeme_C0.bpo|org.eventb.core.poFile#Systeme_C0|org.eventb.core.poPredicateSet#EVTHYPSysteme_ctx_C0_Instance_:(" org.eventb.core.poStamp="21">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Route(train)∉(∅ ⦂ ℙ(ℤ×TRONCONS))" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="{t⦂TRONCONS·train ↦ (0 ↦ t)∈Route ∣ t}⊈ran(Position_wagon)" org.eventb.core.source="/SystemeGestionFerroviaire/Systeme_C0.bum|org.eventb.core.machineFile#Systeme_C0|org.eventb.core.event#H|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
