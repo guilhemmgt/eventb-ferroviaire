@@ -9,7 +9,7 @@
         <org.eventb.core.action name="*" org.eventb.core.assignment="Destination ≔ ∅" org.eventb.core.comment="Un train n'a pas de destination initiale" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="'" org.eventb.core.assignment="Route ≔ ∅" org.eventb.core.comment="Un train n'a pas de route initiale (= a une route vide)" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="Position_wagon ≔ Position_initiale ∘ (train_de_w)" org.eventb.core.comment="&#9;Un train a une position initiale, sur 1 unique tronçon" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="Autorite_mouvement ≔ Position_initiale∼" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="Autorite_mouvement  :∣ ∀t · t ∈ TRAINS ⇒ Autorite_mouvement'(t) = {Position_initiale(t)}" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AvancerWagonTete">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AvancerWagonTete"/>
@@ -25,7 +25,7 @@
         <org.eventb.core.guard name="4" org.eventb.core.comment="Le wagon appartient au train &quot;train&quot;" org.eventb.core.label="grd8" org.eventb.core.predicate="(wagon ↦ train) ∈ train_de_w"/>
         <org.eventb.core.parameter name="1" org.eventb.core.identifier="wagon"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="Route ≔ ({train}⩤Route)&#13;&#10;&#9;&#9;∪ {_train↦(i−1↦t) ∣ _train=train ∧ i≠0 ∧ i↦t∈(Route[{train}]) }" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="internal7" org.eventb.core.comment="On a le droit d'avancer" org.eventb.core.label="grd9" org.eventb.core.predicate="Autorite_mouvement[{t ∣train ↦(0↦t) ∈ Route}] = {train}"/>
+        <org.eventb.core.guard name="internal7" org.eventb.core.comment="On a le droit d'avancer (le tronçon d'après est dans l'autorité de mouvement du train)" org.eventb.core.label="grd9" org.eventb.core.predicate="∃ t · train ↦ (0 ↦ t) ∈ Route ⇒ t ∈ Autorite_mouvement(train)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AvancerWagonQueue">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AvancerWagonQueue"/>
@@ -42,15 +42,14 @@
     <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AttribuerRoute">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AttribuerRoute"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RenouvelerAutoriteMouvement">
+    <org.eventb.core.event name="H" org.eventb.core.comment="On renouvele l'autorité de mouvement d'un train avec la plus grande chaine de tronçons &#10;de sa route, tel qu'il a le droit d'avancer (donc là où y a pas de train, et que le tronçon n'est pas déjà alloué &#10;à un autre train, dans son autorité de mouvement)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RenouvelerAutoriteMouvement">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="train"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="train ∈ TRAINS"/>
         <org.eventb.core.guard name="+" org.eventb.core.comment="Le train doit avoir une destination" org.eventb.core.label="grd2" org.eventb.core.predicate="train ∈ dom(Destination)"/>
         <org.eventb.core.guard name="," org.eventb.core.comment="Le train a une route non vide" org.eventb.core.label="grd3" org.eventb.core.predicate="Route(train) ∉ ∅"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="Autorite_mouvement[{am ∣ am ∈ ({S ∣ (∀t · t ∈ S ⇒ t ∈ dom(AM) ∨ AM(t) = train) &#13;&#10;∧ (∃t · 0 ↦ t ∈ Route[{train}] ∧ t ∈ S) &#13;&#10;∧ ({n ∣ ∃t ∈ S ∧ n ↦ Route[{train}]} = {n ∣ 0 ≤ n ∧ n &lt; card(S)}) ∧ S ∈ ℙ(TRONCONS)}) &#13;&#10;∧ (∀am2 · am2 ∈ ({S ∣ (∀t · t ∈ S ⇒ t ∈ dom(AM) ∨ AM(t) = train) &#13;&#10;∧ (∃t · 0 ↦ t ∈ Route[{train}] ∧ t ∈ S) &#13;&#10;∧ ({n ∣ ∃t ∈ S ∧ n ↦ Route[{train}]} = {n ∣ 0 ≤ n ∧ n &lt; card(S)}) ∧ S ∈ ℙ(TRONCONS)}) &#13;&#10;⇒ card(am) ≥ card(am2)}] ≔ train" org.eventb.core.comment="On attribue à l'autorité de mouvement tous les tronçons de la route du train &#13;&#10;jusqu'à un tronçon déjà attribué à un autre train" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="." org.eventb.core.comment="Le troncon est libre" org.eventb.core.label="grd4" org.eventb.core.predicate="{t ∣train ↦(0↦t) ∈ Route} ⊈ (ran(Position_wagon))"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="Autorite_mouvement[{E}] ≔ train&#13;&#10;&#13;&#10;E = {am ∣ am ∈ (D) ∧ (∀am2 · am2 ∈ (D) ⇒ card(am) ≥ card(am2)}&#13;&#10;&#13;&#10;D = {S ∣ A ∧ B ∧ C ∧ S ∈ ℙ(TRONCONS)}&#13;&#10;&#13;&#10;A = ∀t · t ∈ S ⇒ t ∈ dom(AM) ∨ AM(t) = train&#13;&#10;&#13;&#10;B = ∃t · 0 ↦ t ∈ Route[{train}] ∧ t ∈ S&#13;&#10;&#13;&#10;C = ({n ∣ ∃t ∈ S ∧ n ↦ Route[{train}]} = {n ∣ 0 ≤ n ∧ n &lt; card(S)})&#13;&#10;&#13;&#10;Autorite_mouvement[{E}] ≔ train" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="Autorite_mouvement ≔ (Autorite_mouvement ∖ {x ↦ pt ∣ x↦pt ∈ Autorite_mouvement ∧ x=train}) &#10;∪ {x ↦ pt ∣ x=train ∧ pt ∈ {am ∣ am ∈ ({S ∣ S ∈ ℙ(TRONCONS) ∧ Autorite_mouvement∼[{S}] ⊆ {train}&#10;∧ (∃t · 0 ↦ t ∈ Route[{train}] ∧ t ∈ S) ∧ ({n ∣ ∃t · t ∈ S ∧ n ↦ t ∈ Route[{train}]} = {n ∣ 0 ≤ n ∧ n &lt; card(S)})})&#10;∧ (∀am2 · am2 ∈ ({S ∣ S ∈ ℙ(TRONCONS) ∧ Autorite_mouvement∼[{S}] ⊆ {train}&#10;∧ (∃t · 0 ↦ t ∈ Route[{train}] ∧ t ∈ S) ∧ ({n ∣ ∃t · t ∈ S ∧ n ↦ t ∈ Route[{train}]} = {n ∣ 0 ≤ n ∧ n &lt; card(S)})}) ⇒ card(am) ≥ card(am2))}}" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="Autorite_mouvement"/>
-    <org.eventb.core.invariant name="J" org.eventb.core.label="inv1" org.eventb.core.predicate="Autorite_mouvement ∈ TRONCONS ⇸ TRAINS"/>
+    <org.eventb.core.invariant name="J" org.eventb.core.label="inv1" org.eventb.core.predicate="Autorite_mouvement ∈ TRAINS → ℙ1(TRONCONS)"/>
 </org.eventb.core.machineFile>
